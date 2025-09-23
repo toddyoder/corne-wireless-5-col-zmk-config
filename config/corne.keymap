@@ -25,6 +25,28 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard
+            hold-trigger-on-release;
+        };
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
+            hold-trigger-on-release;
+        };
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -38,7 +60,7 @@
                         display-name = "Base";
                         bindings = <
    AS(DOT)            AS(COMMA)           AS(P)           AS(Y)           AS(F)     AS(G)   AS(C)           AS(R)              AS(L)               AS(SLASH)
-   &mt LSHIFT A       &mt LCTRL O         &mt LALT E      &mt LGUI U      AS(I)     AS(D)   &mt RGUI H      &mt RALT T         &mt RCTRL N         &mt RSHIFT S
+   &hml LSHIFT A      &hml LCTRL O        &hml LALT E     &hml LGUI U     AS(I)     AS(D)   &hmr RGUI H     &hmr RALT T        &hmr RCTRL N        &hmr RSHIFT S
    AS(SQT)            AS(Q)               AS(J)           AS(K)           AS(X)     AS(B)   AS(M)           AS(W)              AS(V)               AS(Z)
                                           &none       &none       &lt 1 RET     &mt RSHIFT SPACE     &kp BSPC      &none
                         >;
