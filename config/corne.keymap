@@ -53,16 +53,16 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  .  |  ,  |  P  |  Y  |  F  |     |  G  |  C   |  R   |  L  | / |
+// |  .  |  ,  |  P  |  Y  |  F  |     |  G  |  C   |  R   |  L  | ; |
 // |  A  |  O  |  E  |  U  |  I  |     |  D  |  H   |  T   |  N  | S | 
 // |  '  |  Q  |  J  |  K  |  X  |     |  B  |  M   |  W   |  V  | Z |
-//             |     |  L3 | ENT |     | SPC | BSPC |  L2  |
+//             |  L3 |  L2 | ENT |     | SPC | BSPC |      |
                         display-name = "Base";
                         bindings = <
-   AS(DOT)            AS(COMMA)           AS(P)           AS(Y)           AS(F)     AS(G)   AS(C)           AS(R)              AS(L)               AS(SLASH)
+   AS(DOT)            AS(COMMA)           AS(P)           AS(Y)           AS(F)     AS(G)   AS(C)           AS(R)              AS(L)               &kp SEMI
    &hml LSHIFT A      &hml LCTRL O        &hml LALT E     &hml LGUI U     AS(I)     AS(D)   &hmr RGUI H     &hmr RALT T        &hmr RCTRL N        &hmr RSHIFT S
    AS(SQT)            AS(Q)               AS(J)           AS(K)           AS(X)     AS(B)   AS(M)           AS(W)              AS(V)               AS(Z)
-                                          &none           &mo 3       &lt 1 RET     &mt RSHIFT SPACE     &kp BSPC      &mo 2
+                                          &mo 3           &mo 2       &lt 1 RET     &mt RSHIFT SPACE     &kp BSPC      &none
                         >;
                 };
 
@@ -84,13 +84,13 @@
 
                symbol_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC |     |     |   \  |     |             |     |     |     |     |     |
+// | ESC |  ~  |     |   \  |     |             |     |     |     |     |     |
 // |     |  `  |  [  |   ]  |     |             |     |     |     |     |     |
 // |     |     | TAB | PIPE |     |             |     |     |     |     |     |
 //             |     |      |     |             |     |     |     |
                         display-name = "Symbol";
                         bindings = <
-   &none            &none             &none            &kp BSLH         &none              &none       &none       &none        &none        &none
+   &none            &kp TILDE         &none            &kp BSLH         &none              &none       &none       &none        &none        &none
    &kp LSHIFT       &mt LCTRL GRAVE   &mt LALT LBKT    &mt LGUI RBKT    &none              &kp RGUI    &kp RALT    &kp RCTRL    &kp RSHIFT   &none
    &none            &none             &kp TAB          &kp PIPE         &none              &none       &none       &none        &none        &none
                                       &none            &none            &none              &none       &none       &none
