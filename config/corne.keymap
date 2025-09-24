@@ -68,13 +68,13 @@
 
                 number_layer {
 // -----------------------------------------------------------------------------------------
-// |     | mLFT | UP  |      |      |             |     |  7   |  8  |  9  |  /  |
+// |     | mLFT | UP  | Pdsk | Ndsk |             |     |  7   |  8  |  9  |  /  |
 // |     | LFT  | DWN | RGT  | mRGT |             |  =  |  4   |  5  |  6  |  .  |
 // | cut | copy | pst | undo | redo |             |     |  1   |  2  |  3  |  -  |
 //              |     |      |      |             |  0  | BSPC |     |
                         display-name = "Number";
                         bindings = <
-   &none      &kp LG(LEFT)  &kp UP      &none        &none              &none        &kp N7    &kp N8    &kp N9     &kp SLASH
+   &none      &kp LG(LEFT)  &kp UP      &kp LC(LEFT) &kp LC(RIGHT)      &none        &kp N7    &kp N8    &kp N9     &kp SLASH
    &kp LSHIFT &kp LEFT      &kp DOWN    &kp RIGHT    &kp LG(RIGHT)      &kp EQUAL    &kp N4    &kp N5    &kp N6     &kp DOT
    &kp LG(X)  &kp LG(C)     &kp LG(V)   &kp LG(Z)    &kp LS(LG(Z))      &none        &kp N1    &kp N2    &kp N3     &kp MINUS
                             &none       &none        &none              &kp N0       &kp BSPC      &none
@@ -100,14 +100,15 @@
               nav_layer {
 // -----------------------------------------------------------------------------------------
 // |    |      | Papp | Napp |      |             |     |     |     |     |     |
-// |    | Pdsk | Ptab | Ntab | Ndsk |             |     |     |     |     |     |
+// |    |      | Ptab | Ntab |      |             |     |     |     |     |     |
 // |    |      | Pwin | Nwin |      |             |     |     |     |     |     |
 //             |      |      |      |             |     |     |     |
                         display-name = "Nav";
                         bindings = <
-   &none   &none          &kp LS(LG(TAB))    &kp LG(TAB)    &none              &none    &none    &none    &none    &none
-   &none   &kp LC(LEFT)   &kp LS(LC(TAB))    &kp LC(TAB)    &kp LC(RIGHT)      &none    &none    &none    &none    &none
-   &none   &none          &kp LS(LA(TAB))    &kp LA(TAB)    &none              &none    &none    &none    &none    &none
+   &none   &none   &kp LS(LG(TAB))    &kp LG(TAB)    &none              &none    &none    &none    &none    &none
+   &none   &none   &kp LS(LC(TAB))    &kp LC(TAB)    &none   
+              &none    &none    &none    &none    &none
+   &none   &none   &kp LS(LA(TAB))    &kp LA(TAB)    &none              &none    &none    &none    &none    &none
                           &none              &none          &none              &none    &none    &none
                         >;
                 };
