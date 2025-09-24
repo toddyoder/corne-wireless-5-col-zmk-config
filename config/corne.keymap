@@ -81,11 +81,11 @@
    AS(DOT)            AS(COMMA)           AS(P)           AS(Y)           AS(F)     AS(G)   AS(C)           AS(R)              AS(L)               &kp SEMI
    &hml LSHIFT A      &hml LCTRL O        &hml LALT E     &hml LGUI U     AS(I)     AS(D)   &hmr RGUI H     &hmr RALT T        &hmr RCTRL N        &hmr RSHIFT S
    AS(SQT)            AS(Q)               AS(J)           AS(K)           AS(X)     AS(B)   AS(M)           AS(W)              AS(V)               AS(Z)
-                                          &none           &none          &lt 1 RET     &mt RSHIFT SPACE     &kp BSPC      &none
+                                          &mo 3           &mo 2          &lt 1 RET     &mt RSHIFT SPACE     &kp BSPC      &none
                         >;
                 };
 
-                number_layer {
+                number_layer1 {
 // -----------------------------------------------------------------------------------------
 // |     | mLFT | UP  | Pdsk | Ndsk |             |     |  7   |  8  |  9  |  /  |
 // |     | LFT  | DWN | RGT  | mRGT |             |  =  |  4   |  5  |  6  |  .  |
@@ -93,30 +93,30 @@
 //              |     |      |      |             |  0  | BSPC |     |
                         display-name = "Number";
                         bindings = <
-   &none      &kp LG(LEFT)  &kp UP      &kp LC(LEFT) &kp LC(RIGHT)      &none        &kp N7    &kp N8    &kp N9     &kp SLASH
-   &kp LSHIFT &kp LEFT      &kp DOWN    &kp RIGHT    &kp LG(RIGHT)      &kp EQUAL    &kp N4    &kp N5    &kp N6     &kp DOT
-   &kp LG(X)  &kp LG(C)     &kp LG(V)   &kp LG(Z)    &kp LS(LG(Z))      &none        &kp N1    &kp N2    &kp N3     &kp MINUS
-                            &none       &none        &none              &kp N0       &kp BSPC      &none
+   &none      &kp LG(LEFT)  &kp UP      &kp LC(LEFT) &kp LC(RIGHT)      &none              &kp N7          &kp N8           &kp N9           &kp SLASH
+   &kp LSHIFT &kp LEFT      &kp DOWN    &kp RIGHT    &kp LG(RIGHT)      &hmr RGUI EQUAL    &hmr RALT N4    &hmr RCTRL N5    &hmr RSHIFT N6   &kp DOT
+   &kp LG(X)  &kp LG(C)     &kp LG(V)   &kp LG(Z)    &kp LS(LG(Z))      &none              &kp N1          &kp N2           &kp N3           &kp MINUS
+                            &none       &none        &none              &kp N0             &kp BSPC        &none
                         >;
                 };
 
 
-               symbol_layer {
+               symbol_layer2 {
 // -----------------------------------------------------------------------------------------
 // | ESC |  ~  |     |   \  |     |             |     |      |     |     |     |
 // |     |  `  |  [  |   ]  |     |             |     |      |     |     |     |
 // |     |     | TAB | PIPE |     |             |     |      |     |     |     |
-//             |     |      |     |             |     | BSPC |     |
+//             |     |      |     |             | SPC | BSPC |     |
                         display-name = "Symbol";
                         bindings = <
-   &none            &kp TILDE         &none            &kp BSLH         &none              &none       &none       &none        &none        &none
-   &kp LSHIFT       &mt LCTRL GRAVE   &mt LALT LBKT    &mt LGUI RBKT    &none              &kp RGUI    &kp RALT    &kp RCTRL    &kp RSHIFT   &none
-   &none            &none             &kp TAB          &kp PIPE         &none              &none       &none       &none        &none        &none
-                                      &none            &none            &none              &none       &kp BSPC    &none
+   &kp ESCAPE       &kp TILDE         &none            &kp BSLH         &none              &none            &none       &none        &none        &none
+   &kp LSHIFT       &mt LCTRL GRAVE   &mt LALT LBKT    &mt LGUI RBKT    &none              &kp RGUI         &kp RALT    &kp RCTRL    &kp RSHIFT   &none
+   &none            &none             &kp TAB          &kp PIPE         &none              &none            &none       &none        &none        &none
+                                      &none            &none            &none              &mt RSHIFT SPACE &kp BSPC    &none
                         >;
                 };
 
-              nav_layer {
+              nav_layer3 {
 // -----------------------------------------------------------------------------------------
 // |     |     | LEFT | RIGHT |      |             |     |     |     |     |     |
 // | CMD | TAB | Ptab | Ntab  |      |             |     |     |     |     |     |
@@ -146,34 +146,18 @@
                         >;
                 };
 
-                lower_layer {
+                bluetooth_layer {
 // -----------------------------------------------------------------------------------------
-// | !     |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
-// | BT1   | BT2 | BT3 | BT4 | BT5 |     | LFT | DWN |  UP | RGT |     |
+// |       |     |     |     |     |     |     |     |     |     |     |
+// | BT1   | BT2 | BT3 | BT4 | BT5 |     |     |     |     |     |     |
 // | BTCLR |     |     |     |     |     |     |     |     |     |     |
-//               | GUI |     | SPC |     | ENT | ESC | TAB |
-                        display-name = "Lower";
+//               |     |     |     |     |     |     |     |
+                        display-name = "Bluetooth";
                         bindings = <
-   &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT        &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &trans 
-   &bt BT_CLR   &trans       &trans       &trans       &trans           &trans    &trans    &trans          &trans    &trans 
-                             &kp LGUI     &trans       &kp SPACE        AS(RET)   &kp ESC   &kp TAB
-                        >;
-                };
-
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// | 1! |  2@ |  3# |  4$ |  5% |     |  6^ |  7& |  8* |  9(  |  0)  |
-// | -_ |  =+ |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
-// | `~ |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
-//            | GUI | ESC | SPC |     | ENT |     | TAB |
-                        display-name = "Raise";
-                        bindings = <
-
-   AS(N1)    AS(N2)    AS(N3)    AS(N4)    AS(N5)        AS(N6)    AS(N7)    AS(N8)    AS(N9)   AS(N0)
-   AS(MINUS) AS(EQUAL) &kp LBRC  &kp LBKT  &kp LPAR      &kp RPAR  &kp RBKT  &kp RBRC  AS(FSLH) AS(BSLH)
-   AS(GRAVE) &trans    &trans    AS(COMMA) &kp COLON     &kp SEMI  AS(DOT)   &kp LCTRL &kp RALT &trans
-                       &kp LGUI  &kp ESC   &kp SPACE     AS(RET)   &trans    &kp TAB
+   &none     &none       &none     &none     &none        &none   &none  &none   &none  &none
+   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &none  &none  &none   &none
+   &bt BT_CLR   &none       &none       &none       &none           &none    &none    &none    &none   &none
+                             &none      &none      &none            &none   &none    &none
                         >;
                 };
 
