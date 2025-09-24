@@ -47,7 +47,24 @@
             // hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
+        mo2_cmd_release: behavior_macro {
+          compatible = "zmk,behavior_macro";
+          label = "MO2_CMD_RELEASE";
+          #binding-cells = <0>;
+          bindings = <&mo 2>;
+          release-bindings = <&kp LGUI>;
+        };
     };
+
+    macros {
+        cmd_tab: macro_cmd_tab {
+          compatible = "zmk,behavior_macro";
+          label = "CMD_TAB";
+          #binding-cells = <0>;
+          bindings = <&kp LGUI &kp TAB>;
+        };  
+    };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -62,7 +79,7 @@
    AS(DOT)            AS(COMMA)           AS(P)           AS(Y)           AS(F)     AS(G)   AS(C)           AS(R)              AS(L)               &kp SEMI
    &hml LSHIFT A      &hml LCTRL O        &hml LALT E     &hml LGUI U     AS(I)     AS(D)   &hmr RGUI H     &hmr RALT T        &hmr RCTRL N        &hmr RSHIFT S
    AS(SQT)            AS(Q)               AS(J)           AS(K)           AS(X)     AS(B)   AS(M)           AS(W)              AS(V)               AS(Z)
-                                          &mo 3           &mo 2       &lt 1 RET     &mt RSHIFT SPACE     &kp BSPC      &none
+                                          &mo 3        &mo2_cmd_release   &lt 1 RET     &mt RSHIFT SPACE     &kp BSPC      &none
                         >;
                 };
 
@@ -105,11 +122,10 @@
 //             |      |      |      |             |     |     |     |
                         display-name = "Nav";
                         bindings = <
-   &none   &none   &kp LS(LG(TAB))    &kp LG(TAB)    &none              &none    &none    &none    &none    &none
-   &none   &none   &kp LS(LC(TAB))    &kp LC(TAB)    &none   
-              &none    &none    &none    &none    &none
+   &none   &none   &kp LS(LG(TAB))    &cmd_tab       &none              &none    &none    &none    &none    &none
+   &none   &none   &kp LS(LC(TAB))    &kp LC(TAB)    &none              &none    &none    &none    &none    &none
    &none   &none   &kp LS(LA(TAB))    &kp LA(TAB)    &none              &none    &none    &none    &none    &none
-                          &none              &none          &none              &none    &none    &none
+                   &none              &none          &none              &none    &none    &none
                         >;
                 };
 
