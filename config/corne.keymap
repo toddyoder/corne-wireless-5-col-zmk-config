@@ -81,7 +81,7 @@
    AS(DOT)            AS(COMMA)           AS(P)           AS(Y)           AS(F)     AS(G)   AS(C)           AS(R)              AS(L)               &kp SEMI
    &hml LSHIFT A      &hml LCTRL O        &hml LALT E     &hml LGUI U     AS(I)     AS(D)   &hmr RGUI H     &hmr RALT T        &hmr RCTRL N        &hmr RSHIFT S
    AS(SQT)            AS(Q)               AS(J)           AS(K)           AS(X)     AS(B)   AS(M)           AS(W)              AS(V)               AS(Z)
-                                          &mo 3           &mo 2   &lt 1 RET     &mt RSHIFT SPACE     &kp BSPC      &none
+                                          &none           &none          &lt 1 RET     &mt RSHIFT SPACE     &kp BSPC      &none
                         >;
                 };
 
@@ -103,16 +103,16 @@
 
                symbol_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC |  ~  |     |   \  |     |             |     |     |     |     |     |
-// |     |  `  |  [  |   ]  |     |             |     |     |     |     |     |
-// |     |     | TAB | PIPE |     |             |     |     |     |     |     |
-//             |     |      |     |             |     |     |     |
+// | ESC |  ~  |     |   \  |     |             |     |      |     |     |     |
+// |     |  `  |  [  |   ]  |     |             |     |      |     |     |     |
+// |     |     | TAB | PIPE |     |             |     |      |     |     |     |
+//             |     |      |     |             |     | BSPC |     |
                         display-name = "Symbol";
                         bindings = <
    &none            &kp TILDE         &none            &kp BSLH         &none              &none       &none       &none        &none        &none
    &kp LSHIFT       &mt LCTRL GRAVE   &mt LALT LBKT    &mt LGUI RBKT    &none              &kp RGUI    &kp RALT    &kp RCTRL    &kp RSHIFT   &none
    &none            &none             &kp TAB          &kp PIPE         &none              &none       &none       &none        &none        &none
-                                      &none            &none            &none              &none       &none       &none
+                                      &none            &none            &none              &none       &kp BSPC    &none
                         >;
                 };
 
