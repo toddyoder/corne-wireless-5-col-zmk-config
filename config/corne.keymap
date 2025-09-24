@@ -50,7 +50,7 @@
     };
 
     macros {
-        mo2_cmd_release: behavior_macro {
+        mo2_cmd_release: macro_mo2_cmd_release {
           compatible = "zmk,behavior-macro";
           label = "MO2_CMD_RELEASE";
           #binding-cells = <0>;
