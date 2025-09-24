@@ -79,7 +79,7 @@
    AS(DOT)            AS(COMMA)           AS(P)           AS(Y)           AS(F)     AS(G)   AS(C)           AS(R)              AS(L)               &kp SEMI
    &hml LSHIFT A      &hml LCTRL O        &hml LALT E     &hml LGUI U     AS(I)     AS(D)   &hmr RGUI H     &hmr RALT T        &hmr RCTRL N        &hmr RSHIFT S
    AS(SQT)            AS(Q)               AS(J)           AS(K)           AS(X)     AS(B)   AS(M)           AS(W)              AS(V)               AS(Z)
-                                          &mo 3        &mo 2   &lt 1 RET     &mt RSHIFT SPACE     &kp BSPC      &none
+                                          &mo 3        &mo2_cmd_release   &lt 1 RET     &mt RSHIFT SPACE     &kp BSPC      &none
                         >;
                 };
 
