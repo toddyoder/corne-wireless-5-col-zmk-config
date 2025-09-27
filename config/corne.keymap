@@ -112,9 +112,9 @@
 //                   |      |      |        |             | SPC | BSPC | DEL |
                         display-name = "Nav/Music/Sym";
                         bindings = <
-   &kp LC(LA(LS(Q))) &kp LC(LA(LS(W))) &kp TAB       &mt LGUI C_VOL_UP  &kp LC(LA(LS(U)))  &none            &kp LBKT      &kp RBKT       &kp TILDE         &none
-   &kp C_PREV        &kp LS(LC(TAB))   &kp LC(TAB)   &kp C_PLAY_PAUSE   &kp C_NEXT         &kp RGUI         &mt RALT LBRC &mt RCTRL RBRC &mt RSHIFT GRAVE  &none
-   &none             &kp LS(LA(TAB))   &kp LA(TAB)   &kp C_VOL_DN       &kp LC(LA(LS(J)))  &none            &kp PIPE      &kp BSLH       &none             &none
+   &kp LC(LA(LS(Q)))  &kp LC(LA(LS(W)))       &kp TAB       &mt LGUI C_VOL_UP  &kp LC(LA(LS(U)))  &none         &kp LBKT      &kp RBKT       &kp TILDE         &none
+   &hml LSHIFT C_PREV &hml LCTRL LS(LC(TAB))  &hml LALT LC(TAB)   &hml LGUI C_PLAY_PAUSE   &kp C_NEXT         &kp RGUI     &hmr RALT LBRC &hmr RCTRL RBRC &hmr RSHIFT GRAVE  &none
+   &none             &kp LS(LA(TAB))   &kp LA(TAB)   &kp C_VOL_DN       &kp LC(LA(LS(J)))  &none          &kp PIPE      &kp BSLH       &none             &none
                                  &none         &none              &none              &mt RSHIFT SPACE &kp BSPC      &kp DEL
                         >;
                 };
