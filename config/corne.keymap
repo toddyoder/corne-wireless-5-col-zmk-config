@@ -91,8 +91,8 @@
 
                 number_layer1 {
 // -----------------------------------------------------------------------------------------
-// | ESC | mLFT | UP  | Pdsk | Ndsk |             |    |  7&  |  8* | 9( | /? |
-// | TAB | LFT  | DWN | RGT  | mRGT |             | =+ |  4$  |  5% | 6^ | .  |
+// | ESC | lLFT | UP  | Pdsk | Ndsk |             |    |  7&  |  8* | 9( | /? |
+// | TAB | LFT  | DWN | RGT  | lRGT |             | =+ |  4$  |  5% | 6^ | .  |
 // | cut | copy | pst | undo | redo |             |    |  1!  |  2@ | 3# | -_ |
 //              |     |      |      |             | 0) | BSPC | DEL |
                         display-name = "Number";
@@ -106,10 +106,10 @@
 
                sym_nav_mus_layer2 {
 // -----------------------------------------------------------------------------------------
-// | brghtD | brghtU | TAB  | volU | volU |             |     |  [   |  ]  |  ~  |     |
-// | musP   | Ptab   | Ntab | PLAY | musN |             |     |  {   |  }  |  `  |     |
-// |        | Pwin   | Nwin | volD | volD |             |     | PIPE |  \  |     |     |
-//                   |      |      |      |             | SPC | BSPC | DEL |
+// | brghtD | brghtU | TAB  | volU | volU   |             |     |  [   |  ]  |  ~  |    |
+// | musPrv | Ptab   | Ntab | PLAY | musNxt |             |     |  {   |  }  |  `  |    |
+// |        | Pwin   | Nwin | volD | volD   |             |     | PIPE |  \  |     |    |    
+//                   |      |      |        |             | SPC | BSPC | DEL |
                         display-name = "Nav/Music/Sym";
                         bindings = <
    &kp LC(LA(LS(Q))) &kp LC(LA(LS(W))) &kp TAB       &mt LGUI C_VOL_UP  &kp LC(LA(LS(U)))  &none            &kp LBKT      &kp RBKT       &kp TILDE         &none
@@ -119,22 +119,7 @@
                         >;
                 };
 
-                music_layer3 {
-// -----------------------------------------------------------------------------------------
-// |    |     |     |     |     |             |     |     |     |     |     |
-// |    |     |     |     |     |             |     |     |     |     |     |
-// |    |     |     |     |     |             |     |     |     |     |     |
-//            |     |     |     |             |     |     |     |
-                        display-name = "Music";
-                        bindings = <
-   &none   &none   &none    &none    &none              &none    &none    &none    &none    &none
-   &none   &none   &none    &none    &none              &none    &none    &none    &none    &none
-   &none   &none   &none    &none    &none              &none    &none    &none    &none    &none
-                   &none    &none    &none              &none    &none    &none
-                        >;
-                };
-
-                mouse_layer4 {
+                mouse_layer3 {
 // -----------------------------------------------------------------------------------------
 // |    |      |  UP  |       |     |             |      |       |  sUP  |        |     |
 // |    | LEFT | DOWN | RIGHT |     |             |      | sLEFT | sDOWN | sRIGHT |     |
@@ -149,7 +134,7 @@
                         >;
                 };
 
-                bluetooth_layer5 {
+                bluetooth_layer4 {
 // -----------------------------------------------------------------------------------------
 // |       |     |     |     |     |     |     |     |     |     |     |
 // | BT1   | BT2 | BT3 | BT4 | BT5 |     |     |     |     |     |     |
