@@ -106,15 +106,15 @@
 
                sym_nav_mus_layer2 {
 // -----------------------------------------------------------------------------------------
-// |      |      | TAB  | volU | volU |             |     |  [   |  ]  |  ~  |     |
-// | musP | Ptab | Ntab | PLAY | musN |             |     |  {   |  }  |  `  |     |
-// |      | Pwin | Nwin | volD | volD |             |     | PIPE |  \  |     |     |
-//               |      |      |      |             | SPC | BSPC | DEL |
+// | brghtD | brghtU | TAB  | volU | volU |             |     |  [   |  ]  |  ~  |     |
+// | musP   | Ptab   | Ntab | PLAY | musN |             |     |  {   |  }  |  `  |     |
+// |        | Pwin   | Nwin | volD | volD |             |     | PIPE |  \  |     |     |
+//                   |      |      |      |             | SPC | BSPC | DEL |
                         display-name = "Nav/Music/Sym";
                         bindings = <
-   &none       &none             &kp TAB       &mt LGUI C_VOL_UP  &kp LC(LA(LS(U)))  &none            &kp LBKT      &kp RBKT       &kp TILDE         &none
-   &kp C_PREV  &kp LS(LC(TAB))   &kp LC(TAB)   &kp C_PLAY_PAUSE   &kp C_NEXT         &kp RGUI         &mt RALT LBRC &mt RCTRL RBRC &mt RSHIFT GRAVE  &none
-   &none       &kp LS(LA(TAB))   &kp LA(TAB)   &kp C_VOL_DN       &kp LC(LA(LS(J)))  &none            &kp PIPE      &kp BSLH       &none             &none
+   &kp LC(LA(LS(Q))) &kp LC(LA(LS(W))) &kp TAB       &mt LGUI C_VOL_UP  &kp LC(LA(LS(U)))  &none            &kp LBKT      &kp RBKT       &kp TILDE         &none
+   &kp C_PREV        &kp LS(LC(TAB))   &kp LC(TAB)   &kp C_PLAY_PAUSE   &kp C_NEXT         &kp RGUI         &mt RALT LBRC &mt RCTRL RBRC &mt RSHIFT GRAVE  &none
+   &none             &kp LS(LA(TAB))   &kp LA(TAB)   &kp C_VOL_DN       &kp LC(LA(LS(J)))  &none            &kp PIPE      &kp BSLH       &none             &none
                                  &none         &none              &none              &mt RSHIFT SPACE &kp BSPC      &kp DEL
                         >;
                 };
