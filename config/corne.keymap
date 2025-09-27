@@ -104,37 +104,22 @@
                         >;
                 };
 
-               symbol_layer2 {
+               sym_nav_layer2 {
 // -----------------------------------------------------------------------------------------
-// |     |  ~  |  {  |   }  |     |             |     |      |     |     |     |
-// |     |  `  |  [  |   ]  |     |             |     |      |     |     |     |
-// |     |     |  \  | PIPE |     |             |     |      |     |     |     |
-//             |     |      |     |             | SPC | BSPC | DEL |
+// |     |      | TAB  |     |     |             |     |  [   |  ]  |  ~  |     |
+// |     | Ptab | Ntab | CMD |     |             |     |  {   |  }  |  `  |     |
+// |     | Pwin | Nwin |     |     |             |     | PIPE |  \  |     |     |
+//              |      |     |     |             | SPC | BSPC | DEL |
                         display-name = "Symbol";
                         bindings = <
-   &none            &kp TILDE         &kp LBRC         &kp RBRC         &none              &none            &none       &none        &none        &none
-   &kp LSHIFT       &mt LCTRL GRAVE   &mt LALT LBKT    &mt LGUI RBKT    &none              &kp RGUI         &kp RALT    &kp RCTRL    &kp RSHIFT   &none
-   &none            &none             &kp BSLH         &kp PIPE         &none              &none            &none       &none        &none        &none
-                                      &none            &none            &none              &mt RSHIFT SPACE &kp BSPC    &kp DEL
+   &none       &none             &kp TAB       &none     &none           &none            &kp LBKT      &kp RBKT       &kp TILDE         &none
+   &none       &kp LS(LC(TAB))   &kp LC(TAB)   &kp LGUI  &none           &kp RGUI         &mt RALT LBRC &mt RCTRL RBRC &mt RSHIFT GRAVE  &none
+   &none       &kp LS(LA(TAB))   &kp LA(TAB)   &none     &none           &none            &kp PIPE      &kp BSLH       &none             &none
+                                 &none         &none     &none           &mt RSHIFT SPACE &kp BSPC      &kp DEL
                         >;
                 };
 
-              nav_layer3 {
-// -----------------------------------------------------------------------------------------
-// |     |      | TAB  |      |      |             |     |     |     |     |     |
-// |     | Ptab | Ntab | CMD  |      |             |     |     |     |     |     |
-// |     | Pwin | Nwin |      |      |             |     |     |     |     |     |
-//              |      |      |      |             |     |     |     |
-                        display-name = "Nav";
-                        bindings = <
-   &none      &none            &kp TAB        &none      &none              &none    &none    &none    &none    &none
-   &none      &kp LS(LC(TAB))  &kp LC(TAB)    &kp LGUI   &none              &none    &none    &none    &none    &none
-   &none      &kp LS(LA(TAB))  &kp LA(TAB)    &none      &none              &none    &none    &none    &none    &none
-                               &none          &none      &none              &none    &none    &none
-                        >;
-                };
-
-                mouse_layer4 {
+                mouse_layer3 {
 // -----------------------------------------------------------------------------------------
 // |    |      |  UP  |       |     |             |      |       |  sUP  |        |     |
 // |    | LEFT | DOWN | RIGHT |     |             |      | sLEFT | sDOWN | sRIGHT |     |
@@ -142,14 +127,14 @@
 //             |      |       |     |             | Lclk | Rclk  |       |
                         display-name = "Mouse";
                         bindings = <
-   &none   &none            &mmv MOVE_UP     &none              &none         &none    &none             &msc SCRL_UP    &none    &none
-   &none   &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &none         &none    &msc SCRL_LEFT    &msc SCRL_DOWN    &msc SCRL_RIGHT    &none
-   &none   &none            &none            &none              &none         &none    &none             &none           &none    &none
-                                              &none    &none    &none         &mkp MB1    &mkp MB2    &none
+   &none   &none          &mmv MOVE_UP   &none           &none         &none &none          &msc SCRL_UP   &none           &none
+   &none   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none         &none &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &none
+   &none   &none          &none          &none           &none         &none &none          &none          &none           &none
+                          &none          &none           &none         &mkp MB1             &mkp MB2       &none
                         >;
                 };
 
-                bluetooth_layer5 {
+                bluetooth_layer4 {
 // -----------------------------------------------------------------------------------------
 // |       |     |     |     |     |     |     |     |     |     |     |
 // | BT1   | BT2 | BT3 | BT4 | BT5 |     |     |     |     |     |     |
