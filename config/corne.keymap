@@ -100,7 +100,7 @@
    &kp ESCAPE      &kp LG(LEFT)  &kp UP      &kp LC(LEFT) &kp LC(RIGHT)      &none              &kp N7          &kp N8           &kp N9           &kp SLASH
    &hml LSHIFT TAB &kp LEFT      &kp DOWN    &kp RIGHT    &kp LG(RIGHT)      &kp EQUAL    &hmr RGUI N4    &hmr RALT N5    &hmr RCTRL N6   &hmr RSHIFT DOT
    &kp LG(X)       &kp LG(C)     &kp LG(V)   &kp LG(Z)    &kp LS(LG(Z))      &none              &kp N1          &kp N2           &kp N3           &kp MINUS
-                                 &none       &none        &none              &lt 4 N0           &kp BSPC        &kp DEL
+                                 &none       &none        &mo 4              &mt RSHIFT N0      &kp BSPC        &kp DEL
                         >;
                 };
 
