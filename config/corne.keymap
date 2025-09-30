@@ -85,7 +85,7 @@
    AS(DOT)            AS(COMMA)           AS(P)           AS(Y)           AS(F)     AS(G)      AS(C)         AS(R)          AS(L)           &kp SEMI
    &hml LSHIFT A      &hml LCTRL O        &hml LALT E     &hml LGUI U     AS(I)     AS(D)      &hmr RGUI H   &hmr RALT T    &hmr RCTRL N    &hmr RSHIFT S
    AS(SQT)            AS(Q)               AS(J)           AS(K)           AS(X)     AS(B)      AS(M)         AS(W)          AS(V)           AS(Z)
-                                          &mo 3           &mo 2          &lt 1 RET  &mt RSHIFT SPACE    &kp BSPC      &kp DEL
+                                          &lt 3 DEL       &lt 2 BSPC      &lt 1 RET  &mt RSHIFT SPACE    &kp BSPC      &kp DEL
                         >;
                 };
 
@@ -121,15 +121,15 @@
 
                 mouse_layer3 {
 // -----------------------------------------------------------------------------------------
-// |    |      |  UP  |       | rstrt R |             |      |       |  sUP  |        |     |
-// |    | LEFT | DOWN | RIGHT |         |             |      | sLEFT | sDOWN | sRIGHT |     |
-// |    |      |      |       |     |             |      |       |       |        |     |
-//             |      |       |     |             | Lclk | Rclk  |       |
+// | R Ptab   | R Ntab   |  UP      | rstrt R | add col  |             |      |       |  sUP  |        | SSall |
+// | R indent | LEFT     | DOWN     | RIGHT   | run code |             |      | sLEFT | sDOWN | sRIGHT | SSsel |
+// | R reflow | R source | R consol | R term  | adv code |             |      |       |       |        | SScpy |
+//                       |          |         |          |             | Lclk | Rclk  |       |
                         display-name = "Mouse";
                         bindings = <
-   &none   &none          &mmv MOVE_UP   &none           &none         &none &none          &msc SCRL_UP   &none           &none
-   &none   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none         &none &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &none
-   &none   &none          &none          &none           &none         &none &none          &none          &none           &none
+   &none   &none          &mmv MOVE_UP   &kp LG(LS(N0))  &none         &none &none          &msc SCRL_UP   &none           &kp LG(LS(N3))
+   &none   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none         &none &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &kp LG(LS(N4))
+   &none   &none          &none          &none           &none         &none &none          &none          &none           &kp LG(LS(LC(N4)))
                           &none          &none           &none         &mkp MB1             &mkp MB2       &none
                         >;
                 };
