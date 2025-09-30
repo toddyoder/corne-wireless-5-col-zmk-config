@@ -91,10 +91,10 @@
 
                 number_layer1 {
 // -----------------------------------------------------------------------------------------
-// | ESC | lLFT | UP  | Pdsk | Ndsk |             |    |  7&  |  8* | 9( | /? |
-// | TAB | LFT  | DWN | RGT  | lRGT |             | =+ |  4$  |  5% | 6^ | .  |
-// | cut | copy | pst | undo | redo |             |    |  1!  |  2@ | 3# | -_ |
-//              |     |      |      |             | 0) | BSPC | DEL |
+// | ESC | lLFT | UP  | Pdsk | Ndsk |      |    |  7&  |  8* | 9( | /? |
+// | TAB | LFT  | DWN | RGT  | lRGT |      | =+ |  4$  |  5% | 6^ | .  |
+// | cut | copy | pst | undo | redo |      |    |  1!  |  2@ | 3# | -_ |
+//              |     |      |      |      | 0) | BSPC | DEL |
                         display-name = "Number";
                         bindings = <
    &kp ESCAPE      &kp LG(LEFT)  &kp UP      &kp LC(LEFT) &kp LC(RIGHT)      &none              &kp N7          &kp N8           &kp N9           &kp SLASH
@@ -106,10 +106,10 @@
 
                sym_nav_mus_layer2 {
 // -----------------------------------------------------------------------------------------
-// | brghtD | brghtU | TAB  | volU | volU   |             |     |  [   |  ]  |  ~  |    |
-// | musPrv | Ptab   | Ntab | PLAY | musNxt |             |     |  {   |  }  |  `  |    |
-// |        | Pwin   | Nwin | volD | volD   |             |     | PIPE |  \  |     |    |    
-//                   |      |      |        |             | SPC | BSPC | DEL |
+// | brghtD | brghtU | TAB  | volU | volU   |        |     |  [   |  ]  |  ~  |    |
+// | musPrv | Ptab   | Ntab | PLAY | musNxt |        |     |  {   |  }  |  `  |    |
+// |        | Pwin   | Nwin | volD | volD   |        |     | PIPE |  \  |     |    |    
+//                   |      |      |        |        | SPC | BSPC | DEL |
                         display-name = "Nav/Music/Sym";
                         bindings = <
    &kp LC(LA(LS(Q)))  &kp LC(LA(LS(W)))       &kp TAB       &mt LGUI C_VOL_UP  &kp LC(LA(LS(U)))  &none         &kp LBKT      &kp RBKT       &kp TILDE         &none
@@ -121,16 +121,16 @@
 
                 mouse_layer3 {
 // -----------------------------------------------------------------------------------------
-// | R Ptab   | R Ntab   |  UP      | rstrt R | add col  |             |      |       |  sUP  |        | SSall |
-// | R indent | LEFT     | DOWN     | RIGHT   | run code |             |      | sLEFT | sDOWN | sRIGHT | SSsel |
-// | R reflow | R source | R consol | R term  | adv code |             |      |       |       |        | SScpy |
-//                       |          |         |          |             | Lclk | Rclk  |       |
+// | R Ptab   | R Ntab   |  UP      | rstrt R | add col  |        |      |       |  sUP  |        | SSall |
+// | R indent | LEFT     | DOWN     | RIGHT   | run code |        |      | sLEFT | sDOWN | sRIGHT | SSsel |
+// | R reflow | R source | R consol | R term  | adv code |        |      |       |       |        | SScpy |
+//                       |          |         |          |        | Lclk | Rclk  |       |
                         display-name = "Mouse";
                         bindings = <
-   &none   &none          &mmv MOVE_UP   &kp LG(LS(N0))  &none         &none &none          &msc SCRL_UP   &none           &kp LG(LS(N3))
-   &none   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none         &none &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &kp LG(LS(N4))
-   &none   &none          &none          &none           &none         &none &none          &none          &none           &kp LG(LS(LC(N4)))
-                          &none          &none           &none         &mkp MB1             &mkp MB2       &none
+   &kp LG(F9)         &kp LG(F10)    &mmv MOVE_UP   &kp LG(LS(N0))  &kp LG(F7)    &none    &none          &msc SCRL_UP   &none           &kp LG(LS(N3))
+   &kp LG(I)          &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp LA(RET)   &none    &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &kp LG(LS(N4))
+   &kp LC(LS(SLASH))  &kp LC(N1)     &kp LC(N2)     &kp LA(LS(M))   &kp LG(RET)   &none    &none          &none          &none           &kp LG(LS(LC(N4)))
+                                     &none          &none           &none         &mkp MB1 &mkp MB2       &none
                         >;
                 };
 
