@@ -127,7 +127,7 @@
 //                       |          |         |          |        | Lclk | Rclk  |       |
                         display-name = "Mouse";
                         bindings = <
-   &kp LG(F9)         &kp LG(F10)    &mmv MOVE_UP   &kp LG(LS(N0))  &kp LG(F7)    &none    &none          &msc SCRL_UP   &none           &kp LG(LS(N3))
+   &kp LC(F11)        &kp LC(F12)    &mmv MOVE_UP   &kp LG(LS(N0))  &kp LG(F7)    &none    &none          &msc SCRL_UP   &none           &kp LG(LS(N3))
    &kp LG(I)          &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp LA(RET)   &none    &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &kp LG(LS(N4))
    &kp LC(LS(SLASH))  &kp LC(N1)     &kp LC(N2)     &kp LA(LS(M))   &kp LG(RET)   &none    &none          &none          &none           &kp LG(LS(LC(N4)))
                                      &none          &none           &none         &mkp MB1 &mkp MB2       &none
