@@ -66,7 +66,7 @@
             compatible = "zmk,behavior-input-two-axis";
             #binding-cells = <1>;
             x-input-code = <0>;
-            y-input-code = <–1>;     // “move up” direction (negative Y)
+            y-input-code = <-1>;     // "move up" direction (negative Y)
             trigger-period-ms = <16>;
             delay-ms = <0>;
             time-to-max-speed-ms = <500>; 
