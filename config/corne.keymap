@@ -71,6 +71,7 @@
             delay-ms = <0>;
             time-to-max-speed-ms = <500>; 
             acceleration-exponent = <1>; // 0 = uniform speed, 1 = uniform acceleration, 2 = linear acceleration
+            bindings = <&mmv>;
         };
     };
 
