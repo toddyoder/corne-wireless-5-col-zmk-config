@@ -6,8 +6,6 @@
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
-#define U_MOUSE_MOVE_EXPONENT 0
-#define U_MOUSE_MOVE_TIME 650
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -62,6 +60,12 @@
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
             hold-trigger-on-release;
+        };
+
+        &mmv {
+            acceleration-exponent = <0>;       // 0,1,2
+            time-to-max-speed-ms = <300>;      // accel ramp
+            delay-ms = <0>;
         };
     };
 
