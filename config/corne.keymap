@@ -64,10 +64,9 @@
     };
 
     &mmv {
-            acceleration-exponent = <0>;       // 0,1,2
-            time-to-max-speed-ms = <300>;      // accel ramp
-            delay-ms = <0>;
-        };
+        acceleration-exponent = <0>;
+        time-to-max-speed-ms = <300>;
+    };
 
 keymap {
     compatible = "zmk,keymap";
