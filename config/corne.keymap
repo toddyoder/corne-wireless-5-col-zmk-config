@@ -21,15 +21,15 @@
     };
 
     behaviors {
-        as: auto_shift {
+        as: auto-shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            quick_tap_ms = <0>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        hml: home_row_mod_left {
+        hml: home-row-mod-left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -40,7 +40,7 @@
             // hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
         };
-        hmr: home_row_mod_right {
+        hmr: home-row-mod-right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -51,7 +51,7 @@
             // hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
-        hms: home_row_mod_shift {
+        hms: home-row-mod-shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
