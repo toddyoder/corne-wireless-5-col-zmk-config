@@ -61,45 +61,6 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-on-release;
         };
-        
-        // Mouse movements
-        slow_up: slow_up { compatible = "zmk,behavior-mouse-move"; move = <0 -2>; };
-        slow_down: slow_down { compatible = "zmk,behavior-mouse-move"; move = <0 2>; };
-        slow_left: slow_left { compatible = "zmk,behavior-mouse-move"; move = <-2 0>; };
-        slow_right: slow_right { compatible = "zmk,behavior-mouse-move"; move = <2 0>; };
-        fast_up: fast_up { compatible = "zmk,behavior-mouse-move"; move = <0 -10>; };
-        fast_down: fast_down { compatible = "zmk,behavior-mouse-move"; move = <0 10>; };
-        fast_left: fast_left { compatible = "zmk,behavior-mouse-move"; move = <-10 0>; };
-        fast_right: fast_right { compatible = "zmk,behavior-mouse-move"; move = <10 0>; };
-
-        // --- Hold-tap wrappers (tap=slow, hold>=1000ms=fast)
-        ms_up_ht: ms_up_ht {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            tapping-term-ms = <1000>;
-            bindings = <&slow_up>, <&fast_up>;
-        };
-
-        ms_down_ht: ms_down_ht {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            tapping-term-ms = <1000>;
-            bindings = <&slow_down>, <&fast_down>;
-        };
-
-        ms_left_ht: ms_left_ht {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            tapping-term-ms = <1000>;
-            bindings = <&slow_left>, <&fast_left>;
-        };
-
-        ms_right_ht: ms_right_ht {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            tapping-term-ms = <1000>;
-            bindings = <&slow_right>, <&fast_right>;
-        };
     };
 
         keymap {
@@ -158,8 +119,8 @@
 //                       |          |         |          |        | Lclk | Rclk  |       |
                         display-name = "Mouse";
                         bindings = <
-   &kp LC(F11)        &kp LC(F12)    &ms_up_ht      &kp LG(LS(N0))  &kp LG(F7)    &none    &none          &msc SCRL_UP   &none           &kp LG(LS(N3))
-   &hms LSHIFT LG(I)  &ms_left_ht    &ms_down_ht    &ms_right_ht    &kp LA(RET)   &none    &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &kp LG(LS(N4))
+   &kp LC(F11)        &kp LC(F12)    &mmv MOVE_UP   &kp LG(LS(N0))  &kp LG(F7)    &none    &none          &msc SCRL_UP   &none           &kp LG(LS(N3))
+   &hms LSHIFT LG(I)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp LA(RET)   &none    &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &kp LG(LS(N4))
    &kp LC(LS(SLASH))  &kp LC(N1)     &kp LC(N2)     &kp LA(LS(M))   &kp LG(RET)   &none    &none          &none          &none           &kp LG(LS(LC(N4)))
                                      &none          &none           &none         &mkp MB1 &mkp MB2       &none
                         >;
