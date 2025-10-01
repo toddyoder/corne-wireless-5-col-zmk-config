@@ -61,10 +61,10 @@
         };
     };
 
-    &mmv {
-        acceleration-exponent = <0>;
-        time-to-max-speed-ms = <300>;
-    };
+//    &mmv {
+//        acceleration-exponent = <0>;
+//        time-to-max-speed-ms = <300>;
+//    };
 
 keymap {
     compatible = "zmk,keymap";
