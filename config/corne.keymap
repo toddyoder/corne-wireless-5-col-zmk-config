@@ -61,18 +61,6 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-on-release;
         };
-
-        ms_up: ms_up {
-            compatible = "zmk,behavior-input-two-axis";
-            #binding-cells = <1>;
-            x-input-code = <0>;
-            y-input-code = <1>;     // "move up" direction (negative Y)
-            trigger-period-ms = <16>;
-            delay-ms = <0>;
-            time-to-max-speed-ms = <500>; 
-            acceleration-exponent = <1>; // 0 = uniform speed, 1 = uniform acceleration, 2 = linear acceleration
-            bindings = <&mmv>;
-        };
     };
 
         keymap {
@@ -131,7 +119,7 @@
 //                       |          |         |          |        | Lclk | Rclk  |       |
                         display-name = "Mouse";
                         bindings = <
-   &kp LC(F11)        &kp LC(F12)    &ms_up 1       &kp LG(LS(N0))  &kp LG(F7)    &none    &none          &msc SCRL_UP   &none           &kp LG(LS(N3))
+   &kp LC(F11)        &kp LC(F12)    &mmv MOVE_UP { acceleration-exponent = <1>; time-to-max-speed-ms = <500>; }       &kp LG(LS(N0))  &kp LG(F7)    &none    &none          &msc SCRL_UP   &none           &kp LG(LS(N3))
    &hms LSHIFT LG(I)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp LA(RET)   &none    &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &kp LG(LS(N4))
    &kp LC(LS(SLASH))  &kp LC(N1)     &kp LC(N2)     &kp LA(LS(M))   &kp LG(RET)   &none    &none          &none          &none           &kp LG(LS(LC(N4)))
                                      &none          &none           &none         &mkp MB1 &mkp MB2       &none
