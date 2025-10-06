@@ -62,7 +62,7 @@
         tildasgn: tilde-assign {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp TILDE>, <&kp LC(MINUS)>;
+            bindings = <&kp TILDE>, <&kp LA(MINUS)>;
             mods = <(MOD_LSFT)>;
         };
     };
