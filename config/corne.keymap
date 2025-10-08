@@ -77,9 +77,9 @@ keymap {
 //             |  L3 |  L2 | ENT |     | SPC | BSPC |  DEL |
         display-name = "Base";
         bindings = <
-   AS(DOT)        AS(COMMA)      AS(P)         AS(Y)        AS(F)         AS(G)              AS(C)         AS(R)          AS(L)           &kp SEMI
-   &hms LSHIFT A  &hml LCTRL O   &hml LALT E   &hml LGUI U  AS(I)         AS(D)              &hmr RGUI H   &hmr RALT T    &hmr RCTRL N    &hms RSHIFT S
-   AS(SQT)        AS(Q)          AS(J)         AS(K)        AS(X)         AS(B)              AS(M)         AS(W)          AS(V)           AS(Z)
+   &kp DOT        &kp COMMA      &kp P         &kp Y        &kp F         &kp G              &kp C         &kp R          &kp L           &kp SEMI
+   &hms LSHIFT A  &hml LCTRL O   &hml LALT E   &hml LGUI U  &kp I         &kp D              &hmr RGUI H   &hmr RALT T    &hmr RCTRL N    &hms RSHIFT S
+   &kp SQT        &kp Q          &kp J         &kp K        &kp X         &kp B              &kp M         &kp W          &kp V           &kp Z
                                  &lt 3 DEL     &lt 2 BSPC   &lt 1 RET     &mt RSHIFT SPACE   &kp BSPC      &kp DEL
         >;
     };
