@@ -33,7 +33,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp RSHIFT>, <&kp SPACE>;
         };
         hml: home-row-mod-left {
             compatible = "zmk,behavior-hold-tap";
@@ -86,7 +86,7 @@ keymap {
    &kp DOT        &kp COMMA      &kp P         &kp Y        &kp F         &kp G              &kp C         &kp R          &kp L           &kp SEMI
    &hms LSHIFT A  &hml LCTRL O   &hml LALT E   &hml LGUI U  &kp I         &kp D              &hmr RGUI H   &hmr RALT T    &hmr RCTRL N    &hms RSHIFT S
    &kp SQT        &kp Q          &kp J         &kp K        &kp X         &kp B              &kp M         &kp W          &kp V           &kp Z
-                                 &lt 3 DEL     &lt 2 BSPC   &lt 1 RET     &ss RSHIFT SPACE   &kp BSPC      &kp DEL
+                                 &lt 3 DEL     &lt 2 BSPC   &lt 1 RET     &ss                &kp BSPC      &kp DEL
         >;
     };
 
