@@ -46,6 +46,15 @@
             bindings = <&mo>, <&kp>;
             hold-trigger-on-release;
         };
+        rtt: right-thumbs {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-on-release;
+        };
         hml: home-row-mod-left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -97,7 +106,7 @@ keymap {
    &kp DOT        &kp COMMA      &kp P         &kp Y        &kp F         &kp G            &kp C         &kp R          &kp L           &kp SEMI
    &hms LSHIFT A  &hml LCTRL O   &hml LALT E   &hml LGUI U  &kp I         &kp D            &hmr RGUI H   &hmr RALT T    &hmr RCTRL N    &hms RSHIFT S
    &kp SQT        &kp Q          &kp J         &kp K        &kp X         &kp B            &kp M         &kp W          &kp V           &kp Z
-                                 &lft 3 DEL    &lft 2 BSPC  &lft 1 SPACE  &lft RSHIFT RET  &kp BSPC      &kp DEL
+                                 &lft 3 DEL    &lft 2 BSPC  &lft 1 SPACE  &rtt RSHIFT RET  &kp BSPC      &kp DEL
         >;
     };
 
@@ -127,7 +136,7 @@ keymap {
    &kp LC(LA(LS(Q)))  &kp LC(LA(LS(W)))       &kp TAB             &mt LGUI C_VOL_UP       &kp LC(LA(LS(U)))    &none     &kp GRAVE       &kp LBKT        &kp RBKT          &none
    &hms LSHIFT C_PREV &hml LCTRL LS(LC(TAB))  &hml LALT LC(TAB)   &hml LGUI C_PLAY_PAUSE  &kp C_NEXT           &none     &hmr RGUI PIPE  &hmr RALT LBRC  &hmr RCTRL RBRC   &kp RSHIFT
    &kp LG(W)          &kp LS(LA(TAB))         &kp LA(TAB)         &kp C_VOL_DN            &kp LC(LA(LS(J)))    &none     &tildasgn       &kp BSLH        &none             &none
-                                 &none         &none              &none                   &lft RSHIFT RET      &kp BSPC  &kp DEL
+                                 &none         &none              &none                   &rtt RSHIFT RET      &kp BSPC  &kp DEL
          >;
     };
 
