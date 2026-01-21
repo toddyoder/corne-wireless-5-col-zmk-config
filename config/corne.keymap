@@ -74,16 +74,6 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-on-release;
         };
-        hm_arr: home-row-mod-arrow {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R 11 12 13>; 
-            hold-trigger-on-release;
-        };
         tildasgn: tilde-assign {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -117,10 +107,10 @@ keymap {
 //              | lock |  L4  |      |      | 0) | BSPC | DEL |
         display-name = "Number";
         bindings = <
-   &kp ESCAPE      &kp LG(LEFT)       &kp UP            &kp LC(LEFT)       &kp LC(RIGHT)      &none           &kp N7          &kp N8           &kp N9           &kp SLASH
-   &hms LSHIFT TAB &hm_arr LCTRL LEFT &hm_arr LALT DOWN &hm_arr LGUI RIGHT &kp LG(RIGHT)      &kp EQUAL       &hmr RGUI N4    &hmr RALT N5     &hmr RCTRL N6    &hms RSHIFT DOT
-   &kp LG(X)       &kp LG(C)          &kp LG(V)         &kp LG(Z)          &kp LS(LG(Z))      &none           &kp N1          &kp N2           &kp N3           &kp MINUS
-                                      &kp LG(LC(Q))     &mo 4              &none              &mt RSHIFT N0   &kp BSPC        &kp DEL
+   &kp ESCAPE      &kp LG(LEFT)  &kp UP        &kp LC(LEFT) &kp LC(RIGHT)      &none           &kp N7          &kp N8           &kp N9           &kp SLASH
+   &hms LSHIFT TAB &kp LEFT      &kp DOWN      &kp RIGHT    &kp LG(RIGHT)      &kp EQUAL       &hmr RGUI N4    &hmr RALT N5    &hmr RCTRL N6   &hms RSHIFT DOT
+   &kp LG(X)       &kp LG(C)     &kp LG(V)     &kp LG(Z)    &kp LS(LG(Z))      &none           &kp N1          &kp N2           &kp N3           &kp MINUS
+                                 &kp LG(LC(Q)) &mo 4        &none              &mt RSHIFT N0   &kp BSPC        &kp DEL
         >;
     };
 
