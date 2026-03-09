@@ -46,7 +46,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <120>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
@@ -57,7 +57,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <120>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
@@ -68,7 +68,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <120>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
@@ -126,31 +126,31 @@ keymap {
 
     sym_nav_mus_layer2 {
 // -----------------------------------------------------------------------------------------
-// | brghtD | brghtU | TAB  | volU | volU   |        |     |  `   |  [  |  ]  |    |
+// | R Ptab | R Ntab | TAB  | volU | volU   |        |     |  `   |  [  |  ]  |    |
 // | musPrv | Ptab   | Ntab | PLAY | musNxt |        |     | PIPE |  {  |  }  |    |
 // | close  | Pwin   | Nwin | volD | volD   |        |     |  ~   |  \  |     |    |    
 //                   |      |      |        |        | SPC | BSPC | DEL |
         display-name = "Nav/Music/Sym";
         bindings = <
-   &kp LC(LA(LS(Q)))  &kp LC(LA(LS(W)))       &kp TAB             &mt LGUI C_VOL_UP       &kp LC(LA(LS(U)))    &none     &kp GRAVE       &kp LBKT        &kp RBKT          &none
+   &kp LC(F11)        &kp LC(F12)             &kp TAB             &mt LGUI C_VOL_UP       &kp LC(LA(LS(U)))    &none     &kp GRAVE       &kp LBKT        &kp RBKT          &none
    &hms LSHIFT C_PREV &hm LCTRL LS(LC(TAB))   &hm LALT LC(TAB)    &hm LGUI C_PLAY_PAUSE   &kp C_NEXT           &none     &hm RGUI PIPE   &hm RALT LBRC   &hm RCTRL RBRC    &kp RSHIFT
    &kp LG(W)          &kp LS(LA(TAB))         &kp LA(TAB)         &kp C_VOL_DN            &kp LC(LA(LS(J)))    &none     &tildasgn       &kp BSLH        &none             &none
-                                 &none         &none              &none                   &mt RSHIFT SPACE     &kp BSPC  &kp DEL
+                                 &none        &none               &none                   &mt RSHIFT SPACE     &kp BSPC  &kp DEL
          >;
     };
 
     mouse_layer3 {
 // -----------------------------------------------------------------------------------------
-// | R Ptab   | R Ntab   |  UP      | rstrt R | add col  |        |      |       |  sUP  |        | SSall |
+// | brghtD   | brghtU   |  UP      | rstrt R | add col  |        |      |       |  sUP  |        | SSall |
 // | R indent | LEFT     | DOWN     | RIGHT   | run code |        |      | sLEFT | sDOWN | sRIGHT | SSsel |
 // | R reflow | R source | R consol | R term  | adv code |        |      |       |       |        | SScpy |
 //                       |          |         |          |        | Lclk | Rclk  |       |
         display-name = "Mouse";
         bindings = <
-   &kp LC(F11)        &kp LC(F12)    &mmv MOVE_UP   &kp LG(LS(N0))  &kp LG(F7)    &none    &none          &msc SCRL_UP   &none           &kp LG(LS(N3))
-   &hms LSHIFT LG(I)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp LA(RET)   &none    &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &kp LG(LS(N4))
-   &kp LC(LS(SLASH))  &kp LC(N1)     &kp LC(N2)     &kp LA(LS(M))   &kp LG(RET)   &none    &none          &none          &none           &kp LG(LS(LC(N4)))
-                                     &none          &none           &none         &mkp MB1 &mkp MB2       &none
+   &kp LC(LA(LS(Q)))  &kp LC(LA(LS(W)))  &mmv MOVE_UP   &kp LG(LS(N0))  &kp LG(F7)    &none    &none          &msc SCRL_UP   &none           &kp LG(LS(N3))
+   &hms LSHIFT LG(I)  &mmv MOVE_LEFT     &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp LA(RET)   &none    &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &kp LG(LS(N4))
+   &kp LC(LS(SLASH))  &kp LC(N1)         &kp LC(N2)     &kp LA(LS(M))   &kp LG(RET)   &none    &none          &none          &none           &kp LG(LS(LC(N4)))
+                                         &none          &none           &none         &mkp MB1 &mkp MB2       &none
         >;
     };
 
