@@ -215,7 +215,7 @@ keymap {
    &kp LC(LA(LS(Q)))  &kp LC(LA(LS(W)))  &mmv MOVE_UP   &kp LG(LS(N0))  &none         &none     &none          &msc SCRL_UP   &none           &kp LG(LS(N3))
    &kp LSHIFT         &mmv MOVE_LEFT     &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp LA(RET)   &none     &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &kp LG(LS(N4))
    &none              &none              &kp LC(N2)     &kp LC(GRAVE)   &kp LG(RET)   &none     &none          &none          &none           &kp LG(LS(LC(N4)))
-                                         &none          &none           &none         &mrkp MB1  &mkp MB2       &tog 5
+                                         &none          &none           &none         &mkp MB1  &mkp MB2       &tog 5
         >;
     };
 
